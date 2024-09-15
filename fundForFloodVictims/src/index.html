@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+   <title>Fund for Flood Victims</title>
+
+   <!-- Bootstrap -->
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+
+   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+   <!--[if lt IE 9]>
+     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+   <![endif]-->
+
+   <link rel="stylesheet" href="css/style.css">
+ </head>
+ <body>
+   <div class="container" style="width: 650px;">
+     <div class="row">
+         <div class="col-lg-12">
+             <h1 class="text-center" id="scrap" style="font-weight: bolder;">Fund for Flood Victims</h1>
+             <hr />
+             <br />
+             <div id="loader">
+                 <p id="loader-msg" class="text-center">Connecting...</p>
+             </div>
+             <div id="content" >  <!-- style="display: none;" -->
+              <div class="segment">
+                <form onsubmit="App.DonorRegistration(); return false;" class="text-center">
+                  <h3>Donor Registration</h3>
+                  <hr>
+                  <label for="newUserName">Name: &nbsp;</label>
+                  <input type="text" placeholder="Enter your name.." id="newUserName" required>
+                  <br>
+                  <label for="newUserPhone">Phone:</label>
+                  <input type="text" placeholder="Enter your phone number.." id="newUserPhone" required>
+                  <br>
+                  <button class="btn-success" type="submit">Register</button>
+                </form>
+              </div>
+
+              <div class="segment">
+                <form onsubmit="App.Donate(); return false;" class="text-center">
+                  <h3>Make Donation</h3>
+                  <hr>
+                  <label for="userPhone">Phone:</label>
+                  <input type="text" placeholder="Enter your phone number.." id="userPhone" required>
+                  <br>
+                  <label for="zoneSelect">Donation Zone:</label>
+                  <select class="" id="zoneSelect">
+                    <option value="sylhet">Sylhet</option>
+                    <option value="chittagong_south">Chittagong South</option>
+                    <option value="chittagong_north">Chittagong North</option>
+                  </select>
+                  <br>
+                  <button class="btn-success" type="submit">Donate!</button>
+                </form>
+              </div>
+
+              <div class="segment">
+                <form onsubmit="App.getDonationInfo(); return false;" class="text-center">
+                  <h3>Check Donation Amount</h3>
+                  <hr>
+                  <button class="btn-success" type="submit" id="checkBalanceButton">Check</button>
+                  <div id="donationInfo"></div>
+                </form>
+              </div>
+
+              <div class="segment">
+                <form onsubmit="App.getDonorInfo(); return false;" class="text-center">
+                  <h3>Check Donor Information</h3>
+                  <hr>
+                  <span id="checkerElemnts">
+                    <label for="userAccount">Account:</label>
+                    <input type="text" placeholder="Enter your account number.." id="userAccount" required>
+                    <br>
+                    <button class="btn-success" type="submit">Check</button>
+                  </span>
+                  <div id="donorsInfo"></div>
+                </form>
+              </div>
+             </div>
+         </div>
+    </div>
+  </div>
+
+  <!-- TODO_HTML-1: YOU WILL ADD A FUNCTION FOR CASTING VOTE BELOW THIS LINE -->
+
+  <!-- TODO_HTML-1: YOU WILL ADD A FUNCTION FOR CASTING VOTE ABOVE THIS LINE -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

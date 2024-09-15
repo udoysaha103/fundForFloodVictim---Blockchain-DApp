@@ -1,0 +1,49 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(0, 0, 6);
+    color: white;
+}
+
+h3{
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+label{
+    font-weight: bold;
+}
+
+input, select, option{
+    color: black;
+    margin-bottom: 15px;
+    padding: 6px 10px;
+    border-radius: 10px;
+}
+
+.btn-success{
+    border-radius:6px;
+    padding: 6px 10px;
+    font-weight: bold;
+    font-size: medium;
+    color: black;
+}
+
+.segment{
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(0, 0, 17);
+    padding: 15px 50px;
+    border-radius: 10px;
+    border: 1px solid rgb(104, 104, 110);
+    margin-bottom: 25px;
+}
+
+p{
+    margin: 10px;
+}
