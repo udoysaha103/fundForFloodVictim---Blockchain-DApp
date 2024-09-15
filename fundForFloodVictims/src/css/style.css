@@ -47,3 +47,23 @@ input, select, option{
 p{
     margin: 10px;
 }
+
+#navigation{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+#navigation .spacer{
+    width: 10%;
+    min-width: 50px;
+}
+
+#navigation button{
+    background: none;
+    border: none;
+}
+
+#navigation button:hover{
+    font-weight: bolder;
+}

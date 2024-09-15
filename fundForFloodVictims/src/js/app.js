@@ -31,7 +31,7 @@ App = {
         App.contracts.fundForFloodVictims.setProvider( App.webProvider );
   
         // listen for incurring events
-        // App.listenForEvents();
+        App.listenForEvents();
         
         return App.render();
       })
@@ -63,9 +63,6 @@ App = {
           console.error(error);
         }
       }
- 
-      //load contract instance
-      const contractInstance = await App.contracts.fundForFloodVictims.deployed()
      
       loader.hide();
       content.show();
@@ -158,7 +155,59 @@ App = {
     }
   },
 
-  //TODO_JS-4: listenForEvents FUNCTION SOULD BE ADDED BELOW
+  // event listener
+  listenForEvents: async function(){
+    const contractInstance = await App.contracts.fundForFloodVictims.deployed()
+
+    contractInstance.occurEvent({}, {
+      fromBlock: 0,
+      toBlock: "latests"
+    })
+    .watch( function( err, event ){
+      // console.log("Triggered", event);
+
+      // reload page
+      App.render()
+    })
+  },
+
+  // navigation control
+  clickNav: async function(page){
+    const b0 = document.getElementById("b0");
+    const b1 = document.getElementById("b1");
+    const b2 = document.getElementById("b2");
+    const b3 = document.getElementById("b3");
+    b0.setAttribute("style", "font-weight: normal;");
+    b1.setAttribute("style", "font-weight: normal;");
+    b2.setAttribute("style", "font-weight: normal;");
+    b3.setAttribute("style", "font-weight: normal;");
+
+    const s0 = $("#s0");
+    const s1 = $("#s1");
+    const s2 = $("#s2");
+    const s3 = $("#s3");
+    s0.hide();
+    s1.hide();
+    s2.hide();
+    s3.hide();
+
+    if(page == 0){
+      b0.setAttribute("style", "font-weight: bold;");
+      s0.show()
+    }
+    else if(page == 1){
+      b1.setAttribute("style", "font-weight: bold;");
+      s1.show()
+    }
+    else if(page == 2){
+      b2.setAttribute("style", "font-weight: bold;");
+      s2.show()
+    }
+    else if(page == 3){
+      b3.setAttribute("style", "font-weight: bold;");
+      s3.show()
+    }
+  }
 
  };
  

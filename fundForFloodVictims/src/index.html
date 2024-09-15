@@ -25,12 +25,25 @@
          <div class="col-lg-12">
              <h1 class="text-center" id="scrap" style="font-weight: bolder;">Fund for Flood Victims</h1>
              <hr />
+
+             <div id="navigation">
+              <button class="segmentName" onclick="App.clickNav(0);" id="b0" style="font-weight: bold;">Register</button>
+              <button class="spacer"></button>
+              <button class="segmentName" onclick="App.clickNav(1);" id="b1">Donate</button>
+              <button class="spacer"></button>
+              <button class="segmentName" onclick="App.clickNav(2);" id="b2">Check Donation</button>
+              <button class="spacer"></button>
+              <button class="segmentName" onclick="App.clickNav(3);" id="b3">Check Donor</button>
+             </div>
+
+             <hr>
              <br />
              <div id="loader">
                  <p id="loader-msg" class="text-center">Connecting...</p>
              </div>
-             <div id="content" >  <!-- style="display: none;" -->
-              <div class="segment">
+             <div id="content" style="display: none;">
+
+              <div class="segment" id="s0">
                 <form onsubmit="App.DonorRegistration(); return false;" class="text-center">
                   <h3>Donor Registration</h3>
                   <hr>
@@ -44,7 +57,7 @@
                 </form>
               </div>
 
-              <div class="segment">
+              <div class="segment" id="s1" style="display: none;">
                 <form onsubmit="App.Donate(); return false;" class="text-center">
                   <h3>Make Donation</h3>
                   <hr>
@@ -62,7 +75,7 @@
                 </form>
               </div>
 
-              <div class="segment">
+              <div class="segment" id="s2" style="display: none;">
                 <form onsubmit="App.getDonationInfo(); return false;" class="text-center">
                   <h3>Check Donation Amount</h3>
                   <hr>
@@ -71,7 +84,7 @@
                 </form>
               </div>
 
-              <div class="segment">
+              <div class="segment" id="s3" style="display: none;">
                 <form onsubmit="App.getDonorInfo(); return false;" class="text-center">
                   <h3>Check Donor Information</h3>
                   <hr>
