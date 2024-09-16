@@ -78,7 +78,7 @@ The frontend is written in HTML, JavaScript, and Bootstrap and uses Web3.js to i
 
 - **Check Donation Info**: Users can check how much Ether each zone has received.
 
-![Screenshot from 2024-09-16 16-51-26](https://github.com/user-attachments/assets/a22b870a-ec5f-4ff7-a8f4-680b964b6492)
+![Screenshot from 2024-09-16 16-50-50](https://github.com/user-attachments/assets/88dabe54-f82e-4d0b-b03b-e9ea9074f07c)
 
 - **Check Donor Info**: Donors can verify their own registration information by entering their Ethereum account address.
 
