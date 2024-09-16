@@ -4,11 +4,6 @@
 This decentralized application (DApp) is designed to facilitate donations for flood victims using the Ethereum blockchain. Built with Solidity smart contracts and integrated with a web frontend, the app allows donors to register, make donations, and track total funds using MetaMask for transaction approval. The system runs on a local Ethereum network using Ganache for development and testing. Truffle framework is used to facilitate the web interface creation.
 
 
-## Demo
-
-[Coming soon.]
-
-
 
 ## Features
 
@@ -72,9 +67,19 @@ The frontend is written in HTML, JavaScript, and Bootstrap and uses Web3.js to i
 **Features:**
 
 - **Donor Registration**: Users can register as a donor via a simple form.
+file:///home/udoy/Pictures/Screenshots/Screenshot%20from%202024-09-16%2016-47-50.png
+
 - **Make Donation**: Registered donors can choose a zone and make donations.
+/home/udoy/Pictures/Screenshots/Screenshot from 2024-09-16 16-50-28.png
+
+![Screenshot from 2024-09-16 16-52-16](https://github.com/user-attachments/assets/b05beaf5-239c-4232-ba6f-21a6953db869)
+
 - **Check Donation Info**: Users can check how much Ether each zone has received.
+/home/udoy/Pictures/Screenshots/Screenshot from 2024-09-16 16-50-50.png
+
 - **Check Donor Info**: Donors can verify their own registration information by entering their Ethereum account address.
+![Screenshot from 2024-09-16 16-51-26](https://github.com/user-attachments/assets/cd2847e1-6458-41aa-abd7-13ed0ac10ad6)
+
 
 
 
