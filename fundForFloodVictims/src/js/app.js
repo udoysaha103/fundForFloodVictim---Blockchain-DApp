@@ -94,10 +94,15 @@ App = {
     const phone = document.getElementById("userPhone").value;
     const zone = document.getElementById("zoneSelect").value;
 
-    const result = await contractInstance.Donate( phone, zone, { from: App.account[0] } )
+    const etherAmount = Number(prompt("Please enter the amount of donation in ETH: "));
+
+    const result = await contractInstance.Donate( phone, zone, { from: App.account[0], value: (etherAmount * (10**18)) } )
 
     if (result){
       alert("Thanks a lot for the donation! God bless you.", result);
+      
+      // reload pthe window
+      window.location.reload();
     }
     else{
       alert("Failed to receive your donation :(", result);

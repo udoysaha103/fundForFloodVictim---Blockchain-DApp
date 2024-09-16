@@ -4,9 +4,9 @@ pragma solidity >=0.8.2 <0.9.0;
 
 contract fundForFloodVictims {
     // funraiser accounts
-    address private accountSylhet;
-    address private accountChittagongSouth;
-    address private accountChittagongNorth;
+    address payable private accountSylhet;
+    address payable private accountChittagongSouth;
+    address payable private accountChittagongNorth;
 
 
     // donor information
@@ -25,9 +25,9 @@ contract fundForFloodVictims {
 
     // initialize fundraiser accounts with three predefined addresses
     constructor() {
-        accountSylhet = address(0x62ac0EA85a1592e7C9E0F301322263be984669F9);
-        accountChittagongSouth = address(0xAf98be1A9902d55cdA9E8d1cC7FfA86DE32715Ae);
-        accountChittagongNorth = address(0x8569CC4D0947899C2dcD183a0348118894711723);
+        accountSylhet = payable(0x62ac0EA85a1592e7C9E0F301322263be984669F9);
+        accountChittagongSouth = payable(0xAf98be1A9902d55cdA9E8d1cC7FfA86DE32715Ae);
+        accountChittagongNorth = payable(0x8569CC4D0947899C2dcD183a0348118894711723);
 
         count = 0;
     }
@@ -56,11 +56,11 @@ contract fundForFloodVictims {
         require(sha256(abi.encodePacked(donors[msg.sender].mobile)) == sha256(abi.encodePacked(mobile)), "Mobile number mismatch!");
 
         if (sha256(abi.encodePacked(zone)) == sha256(abi.encodePacked("sylhet"))) {
-            payable(accountSylhet).transfer(msg.value);
+            accountSylhet.transfer(msg.value);
         } else if (sha256(abi.encodePacked(zone)) == sha256(abi.encodePacked("chittagong_south"))) {
-            payable(accountChittagongSouth).transfer(msg.value);
+            accountChittagongSouth.transfer(msg.value);
         } else if (sha256(abi.encodePacked(zone)) == sha256(abi.encodePacked("chittagong_north"))) {
-            payable(accountChittagongNorth).transfer(msg.value);
+            accountChittagongNorth.transfer(msg.value);
         } else {
             revert("Invalid zone specified.");
         }
