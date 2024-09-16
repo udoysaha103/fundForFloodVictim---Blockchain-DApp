@@ -67,17 +67,21 @@ The frontend is written in HTML, JavaScript, and Bootstrap and uses Web3.js to i
 **Features:**
 
 - **Donor Registration**: Users can register as a donor via a simple form.
-file:///home/udoy/Pictures/Screenshots/Screenshot%20from%202024-09-16%2016-47-50.png
+
+![Screenshot from 2024-09-16 16-47-50](https://github.com/user-attachments/assets/026463c3-b43f-415c-96fe-2ccb29980eb6)
 
 - **Make Donation**: Registered donors can choose a zone and make donations.
-/home/udoy/Pictures/Screenshots/Screenshot from 2024-09-16 16-50-28.png
+
+![Screenshot from 2024-09-16 16-50-28](https://github.com/user-attachments/assets/2f6a7c25-cb05-4296-9101-8ade929eabb7)
 
 ![Screenshot from 2024-09-16 16-52-16](https://github.com/user-attachments/assets/b05beaf5-239c-4232-ba6f-21a6953db869)
 
 - **Check Donation Info**: Users can check how much Ether each zone has received.
-/home/udoy/Pictures/Screenshots/Screenshot from 2024-09-16 16-50-50.png
+
+![Screenshot from 2024-09-16 16-51-26](https://github.com/user-attachments/assets/a22b870a-ec5f-4ff7-a8f4-680b964b6492)
 
 - **Check Donor Info**: Donors can verify their own registration information by entering their Ethereum account address.
+
 ![Screenshot from 2024-09-16 16-51-26](https://github.com/user-attachments/assets/cd2847e1-6458-41aa-abd7-13ed0ac10ad6)
 
 
